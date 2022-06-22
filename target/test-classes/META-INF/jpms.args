@@ -1,0 +1,4 @@
+--patch-module
+com.dvt.oubus=_
+--add-reads
+com.dvt.oubus=ALL-UNNAMED

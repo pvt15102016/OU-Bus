@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.dvt.sevices.PassengerServiceTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.799 s <<< FAILURE! - in com.dvt.sevices.PassengerServiceTest
+testGetPassengerById  Time elapsed: 0.108 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <2>
+	at com.dvt.oubus/com.dvt.sevices.PassengerServiceTest.testGetPassengerById(PassengerServiceTest.java:80)
+

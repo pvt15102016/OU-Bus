@@ -1,0 +1,6 @@
+com\dvt\sevicesTest\SeatServiceTest.class
+com\dvt\sevicesTest\BusServiceTest.class
+com\dvt\sevices\PassengerServiceTest.class
+com\dvt\sevicesTest\UserServiceTest.class
+com\dvt\sevicesTest\TripServiceTest.class
+com\dvt\sevicesTest\TicketServiceTest.class

@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.dvt.sevicesTest.SeatServiceTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.106 s <<< FAILURE! - in com.dvt.sevicesTest.SeatServiceTest
+testGetSeatById  Time elapsed: 0.036 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: The test case is a prototype.
+	at com.dvt.oubus/com.dvt.sevicesTest.SeatServiceTest.testGetSeatById(SeatServiceTest.java:82)
+
+testGetListSeatByIdBus  Time elapsed: 0.039 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <[]>
+	at com.dvt.oubus/com.dvt.sevicesTest.SeatServiceTest.testGetListSeatByIdBus(SeatServiceTest.java:65)
+

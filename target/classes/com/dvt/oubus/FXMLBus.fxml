@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="800.0" stylesheets="@../../../styles/fxmlbuscontroller.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dvt.oubus.FXMLBusController">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="100.0" styleClass="vBoxLogo" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="imageViewLogo">
+               <image>
+                  <Image url="@../img/bus.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="OUBus" text="OU BUS" />
+            <Button mnemonicParsing="false" onAction="#backHandler" prefHeight="38.0" prefWidth="88.0" styleClass="buttonLogOut">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" styleClass="buttonDelete">
+                     <image>
+                        <Image url="@../img/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="420.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="41.0" prefWidth="440.0" styleClass="hBoxSubject">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textSubject" text="BUS MANAGERMENT" />
+               </children>
+               <VBox.margin>
+                  <Insets right="5.0" />
+               </VBox.margin>
+            </HBox>
+            <TableView fx:id="tableBus" editable="true" prefHeight="303.0" prefWidth="366.0" styleClass="tableViewBus" stylesheets="@../../../styles/fxmlbuscontroller.css">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <VBox prefHeight="500.0" prefWidth="120.0" styleClass="vBoxAction" stylesheets="@../../../styles/fxmlmanager.css" BorderPane.alignment="TOP_LEFT">
+         <children>
+            <VBox maxHeight="-Infinity" prefHeight="220.0" prefWidth="232.0" styleClass="contains" stylesheets="@../../../styles/fxmlbuscontroller.css">
+               <children>
+                  <HBox prefHeight="112.0" prefWidth="200.0" styleClass="hboxSearch">
+                     <children>
+                        <TextField fx:id="txtSearch" prefHeight="26.0" prefWidth="206.0" promptText="Search Bus" styleClass="txtSearch" />
+                        <Button mnemonicParsing="false" onAction="#searchBusHandler" prefWidth="100.0" styleClass="buttonSearch">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" styleClass="buttonSearch">
+                                 <image>
+                                    <Image url="@../img/SearchButton.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox focusTraversable="true" minHeight="-Infinity" minWidth="-Infinity" styleClass="hboxInput">
+                     <children>
+                        <Label styleClass="lbIdBus" text="BUS ID">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
+                           </HBox.margin></Label>
+                        <Label fx:id="lbId" prefHeight="13.0" styleClass="lbId">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox focusTraversable="true" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="hboxInput">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="115.0" styleClass="lbName" text="NAME">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
+                           </HBox.margin></Label>
+                        <TextField fx:id="txtName" prefHeight="26.0" prefWidth="262.0" styleClass="text" />
+                     </children>
+                  </HBox>
+                  <HBox focusTraversable="true" maxWidth="-Infinity" minHeight="-Infinity" styleClass="hboxInput">
+                     <children>
+                        <Label cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="10.0" prefHeight="27.0" prefWidth="110.0" scaleShape="false" styleClass="lbLP" text="LICENSE PLATE">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
+                           </HBox.margin></Label>
+                        <TextField fx:id="txtLicensePlate" styleClass="text" />
+                     </children>
+                  </HBox>
+                  <HBox focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="hboxInput">
+                     <children>
+                        <Label styleClass="lbNOS" text="NUMBER OF SEATS">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="txtNumberOfSeats" styleClass="text" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="300.0" styleClass="hboxButton">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addBusHandler" prefHeight="65.0" prefWidth="102.0" styleClass="buttonAdd">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="buttonAddConfirm">
+                           <image>
+                              <Image url="@../img/AddButton.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#deleteBusHandler" prefWidth="100.0" styleClass="buttonEdit">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="buttonDelete">
+                           <image>
+                              <Image url="@../img/DeleteButton.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+</BorderPane>
